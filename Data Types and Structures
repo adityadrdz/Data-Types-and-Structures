@@ -1,0 +1,83 @@
+1. What are data structures, and why are they important?
+    - Data structures are the way of organizing and storing the data so that it can be accessed and modified efficiently. eg, Tuple, String, List, Dictionary, array etc.
+    - They are important because they are crucial for efficient data management and algorithm implementation, impacting the performance and scalability of software applications.
+
+2. Explain the difference between mutable and immutable data types with examples?
+    - Mutable data types are the type of data type which can be changed after its creation. eg, lists, dictionary, etc.
+    - eg: list=[1,2,3]
+          list[0]=4
+          #here now the original list[1,2,3] after list[0]=4 has become list[4,2,3]
+    - Immutable data types are the type of data type which cannot be changed after its creation. eg, Tuple, String
+    - eg, my_tuple = (1, 2, 3)
+    - my_tuple[0] = 4  # This will raise a TypeError
+
+3. What are the main differences between lists and tuples in Python?
+    - Main Differences Between Lists and Tuples in Python:
+      - Lists are mutable, tuples are immutable.
+      - Tuples are generally faster than lists due to their immutability.
+      - Tuples use less memory compared to lists
+
+4. Describe how dictionaries store data?
+    - Dictionaries store data in key-value pairs. Each key is hashed to a unique index in an array where the corresponding value is stored.
+    - eg, dict = {'name': 'Sonu', 'age': 26}
+        - here name is key while Sonu is value of key.
+
+5. Why might you use a set instead of a list in Python?
+    - Sets autimatically removes duplicate values while List don't do that.
+    - Also sets provides faster membership tests compared to lists.
+  
+6. What is a string in Python, and how is it different from a list?
+    - String is the sequence of characters which is immutable in nature and it contains only string data types and no other data types.
+    - While in other hand Lists are collection of items and is mutable data structure which can contains multiple data types.
+
+7. How do tuples ensure data integrity in Python?
+    - Since tuples are immutable in nature thats why, Once created, the elements of a tuple cannot be changed, ensuring that the data remains constant.
+
+8. What is a hash table, and how does it relate to dictionaries in Python?
+    - Hash Table: A data structure that maps keys to values using a hash function to compute an index into an array of buckets or slots.
+    - Relation to Dictionaries: Python dictionaries are implemented using hash tables.
+
+9. Can lists contain different data types in Python?
+    - Yes: Lists can contain elements of different data types, such as integers, strings, and even other lists.
+    - eg, mylist=[1,'Sonu',3.5]
+
+10. Explain why strings are immutable in Python?
+    - Immutability helps with performance optimization, memory efficiency, and thread safety. It also allows strings to be used as keys in dictionaries.
+
+11. What advantages do dictionaries offer over lists for certain tasks?
+    - Key-Value Mapping: Efficient for lookups, insertions, and deletions based on keys.
+    - Example: Storing user information where quick access to user details by username is needed.
+
+12. Describe a scenario where using a tuple would be preferable over a list.
+    - Storing coordinates of a point (x, y) where the values should not change.
+
+13. How do sets handle duplicate values in Python?
+    - Python set data structures inherently do not allow duplicate values. When we attempt to add duplicate values to a set, or when we create a set from an iterable that contains duplicates, the set will automatically discard the duplicates, storing only one instance of each unique element.
+
+14. How does the “in” keyword work differently for lists and dictionaries?
+    - In List "in" Checks for the presence of a value as an element.
+    - In Dictionary "in" checks for the presence of a key.
+
+15. Can you modify the elements of a tuple? Explain why or why not?
+    - Since Tuples data structure is immutable, meaning we cannot modify the elements of tuples once its created.
+
+16. What is a nested dictionary, and give an example of its use case?
+    - A nested dictionary is the dictionary within another dictionary.
+    - nested_dict = {'user1': {'name': 'Sonu', 'age': 25}, 'user2': {'name': 'Mantu', 'age': 22}}
+
+17.  Describe the time complexity of accessing elements in a dictionary.
+    - The time complexity of accessing elements in a Python dictionary (ie., looking up a value using its key) is, on average, O(1) (constant time).
+
+18. In what situations are lists preferred over dictionaries?
+    - When data naturally fits a sequence, where order and positional access are important, and duplicates are acceptable, a list is the preffered choice.
+
+19. Why are dictionaries considered unordered, and how does that affect data retrieval?
+    - Dictionaries are designed for fast, direct access to values when we have the unique key. Their "unordered" nature means we trade index-based access for extremely efficient key-based retrieval, making them ideal for mapping and lookup tasks.
+    - We cannot retrieve items using integer indices like my_dict[0]. We must know the exact key to retrieve its associated value.
+    - Data retrieval is inherently driven by the key. If we don't know the key, we have to iterate through the dictionary's keys or values to find what we're looking for, which is less efficient than a direct key lookup.
+
+20.  Explain the difference between a list and a dictionary in terms of data retrieval.
+    - Lists are for ordered collections where you want to retrieve "the Nth item," like List[1]. - while dictionaries are for unordered collections where you want to retrieve "the item named X.
+      eg, my_dict = {'name': 'Sonu', 'age': 26, 'city': 'Nashik'}
+      person_name = my_dict['name']
+      person_age = my_age['age']
